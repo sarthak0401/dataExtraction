@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <style>
+        .container {
+            text-align: center;
+            border:dashed;
+            margin:auto 10rem auto 10rem;
+        }
+
+        .form-container {
+            display: inline-block;
+            margin-top: 5rem; /* Adjust as needed */
+            margin-bottom:2rem;
+        }
+
+        .form1 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .fo {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="fo">Upload a file to summarize it</h1>
+
+    <div class="form-container">
+        <form method='POST' enctype='multipart/form-data'>
+            {{ form.hidden_tag() }}
+            {{ form.file() }}
+            {{ form.submit() }}
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
